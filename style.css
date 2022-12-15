@@ -8,6 +8,11 @@ body{
     margin-top: 18px;
    
 }
+#profile #bag #wishlist{
+ margin-right: 10px;
+ margin-top: 0px;
+ padding: 0px;
+}
 .bold div:nth-child(2) img{
     width: 48px;
     margin-left: 0;
@@ -59,20 +64,30 @@ body{
 .space{
     justify-content: space-between;
 }
-.footpara {
-    display: flex;
-    justify-content: space-evenly;
-}
+
 .flex{
     display: flex;
     gap: 20px;
 }
+ion-icon {
+    font-size: 30px;
+  }
+  .footpara {
+    display: flex;
+    justify-content: space-evenly;
+}
+  ion-icon {
+    font-size: 30px;
+  }
 .categorypics{
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: auto;
     cursor: pointer;
     text-align: center;
+}
+input:active:focus{
+    outline: 0;
 }
 
 header{
