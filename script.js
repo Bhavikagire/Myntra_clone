@@ -1,16 +1,26 @@
-// document.querySelector("#homees").addEventListener("click", function(){
-// window.location.href="homeapp.html"
-// })
-// document.querySelector("#sideimg").addEventListener("click", function(){
-//     // window.location.href="homeappilenc.html"
+document.querySelector("#homees").addEventListener("click", function(){
+window.location.href="homeapp.html"
+})
+document.querySelector("#sideimg").addEventListener("click", function(){
+    // window.location.href="homeappilenc.html"
 
-//     // let img = document.createElement("img")
-//     // img.setAttribute("src","")
-//     // document.querySelector("#homees").append(img)
-// })
-// document.querySelector("#profile").addEventListener("click", function(){
-//     window.location.href="signup.html"
-//     })
+    // let img = document.createElement("img")
+    // img.setAttribute("src","")
+    // document.querySelector("#homees").append(img)
+})
+document.querySelector("#profile").addEventListener("click", function(){
+    window.location.href="signup.html"
+    })
+
+    
+
+    document.querySelector("#wishlist").addEventListener("click", function(){
+        window.location.href="wishlist.html"
+        })
+
+        document.querySelector("#bag").addEventListener("click", function(){
+            window.location.href="cart.html"
+            })
 
 
 //     const url = 'https://amazon-merchant-data.p.rapidapi.com/get-asin?gtin=0194252099537&country=de';
