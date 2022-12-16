@@ -1,5 +1,67 @@
 
-       *{
+      .dropbtn {
+        margin-top: 30px;
+        background-color: white;
+        /* color: white; */
+        padding: 16px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+      }
+      #homeapli{
+        width: 200px;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content div{
+        width: 250px;
+      }
+      
+      .dropdown-content {
+        width: auto;
+        display: none;
+        position: absolute;
+        background-color: #F1F1F1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {background-color: #ddd;}
+      .dropdown:hover .dropdown-content {display: flex;}
+      .dropdown:hover .dropbtn {background-color: #cad0ce;}
+    
+    .dropdown-content h2{
+        padding: 10px;
+        padding-left: 20px;
+        color: #ff3f6c;
+    }
+    .dropdown-content img{
+    width: auto;
+    height: 500px;
+  }
+    
+    
+    
+    body{
+        width: 90%;
+        margin: auto;
+    }
+    .left img{
+        width: 120px;
+        margin-top: 18px;
+       
+    }
+   
+      
+      *{
         width: 96%;
         margin: auto;
        }
@@ -32,7 +94,9 @@
 }
 /* #choosecat input:hover{
     /* display: block; */
-  
+  #dropdown :hover .dropdown-content{
+    display: block;
+  }
 */
 input:hover .linkdrop{
     display: block;
@@ -62,9 +126,10 @@ h4{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     height: 750px;
+    width: 90%;
 }
 .inspire img{
-width: 500px;
+width: 450px;
 margin: 20px;
 }
 .check img{
@@ -171,3 +236,7 @@ nav ul li{
     margin: auto;
 }
 
+.dropdown-content img{
+    width: auto;
+    height:auto;
+  }

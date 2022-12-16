@@ -1,3 +1,62 @@
+.dropbtn {
+    margin-top: 30px;
+    background-color: white;
+    /* color: white; */
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content div{
+    width: 250px;
+  }
+  
+  .dropdown-content {
+    width: auto;
+    display: none;
+    position: absolute;
+    background-color: #F1F1F1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown:hover .dropdown-content {display: flex;}
+  .dropdown:hover .dropbtn {background-color: #cad0ce;}
+
+.dropdown-content h2{
+    padding: 10px;
+    padding-left: 20px;
+    color: #ff3f6c;
+}
+
+
+
+body{
+    width: 90%;
+    margin: auto;
+}
+.left img{
+    width: 120px;
+    margin-top: 18px;
+   
+}
+.dropdown-content img{
+    width: auto;
+    height: 500px;
+  }
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -17,6 +76,9 @@ header{
     display: flex;
     gap: 20px;
 }
+ion-icon {
+    font-size: 28px;
+  }
 body{
     width: 90%;
     margin: auto;

@@ -46,14 +46,19 @@ body{
     width: 90%;
     margin: auto;
 }
+.left{
+    display: flex;
+    justify-content: space-between;
+}
 .left img{
     width: 120px;
     margin-top: 18px;
    
 }
-
-
-
+.dropdown-content img{
+    width: auto;
+    height: 500px;
+  }
 body{
     width: 90%;
     margin: auto;
@@ -90,39 +95,9 @@ body{
     display: flex;
     gap: 20px;
 }
-.playstoreimg img{
-    width: 180px;
-    height: 52px;
-   margin-right: 30px;
-   margin-top: 20px;
-}
-.playstoreimg{
-    display: flex;
-   
-}
 
-.footpara {
-    display: flex;
-    justify-content: space-evenly;
-}
 
-footer{
-   
-    padding: 20px;
-    width: 80%;
-    margin: auto;
-   
-  
-}
 
-footer p{
-    font-size: 20px;
-    
-}
-.footpara h2{
-    margin-top: 50px;
-  
-}
 .sortinput p{
    margin-right: 20px;
   font-size: 25px;
@@ -150,11 +125,13 @@ ion-icon {
   margin-bottom: 30px;
 
   }
-#profile #bag #wishlist{
-    margin-right: 10px;
-    margin-top: 0px;
-    padding: 0px;
-   }
+  .bold span{
+    /* font-size: 40px;
+   padding-top: 60px; */
+  }
+#profile{
+    color: #ff3f6c;
+}
 #append div{
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     padding: 20px;
@@ -162,7 +139,7 @@ ion-icon {
 }
 div>img{
    
-    width: 90%;
+    width: 100%;
 }
 #append div span{
     font-size: 23px;
@@ -241,8 +218,7 @@ nav ul li{
 *{
     font-size: 18px;
     color: rgb(59, 57, 57);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+ }
 .bold{
     font-weight: bold;
     font-size: 35px;
@@ -275,17 +251,7 @@ nav ul li{
     margin: auto;
 }
 
-.dropdown-content img{
-    width: auto;
-    height: auto;
-  }
-
-  #threeoff {
-  
-    margin-right: 80px;
-  }
-  #threeoff img{
-     width: 320px;
-     height: 320px;
-    margin-right: 10px;
-  }
+.bold{
+ margin-left: 500px;
+ font-family: 'Times New Roman', Times, serif;
+}
