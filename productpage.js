@@ -5,12 +5,12 @@ document.querySelector("#wishlist").addEventListener("click", function(){
         window.location.href="cart.html"
         })
 
-
+ let data = []
 fetch('https://636cdff391576e19e317be7a.mockapi.io/products')
     .then((res) => res.json())
     .then((res) => {
         console.log(res)
-
+        data = res
         displaydata(res)
     })
     .catch((err) => console.log(err))
@@ -89,6 +89,8 @@ function displaydata(data) {
                 cartitemmyntra.push({ ...el, qty: 1 })
                 localStorage.setItem("myntracart", JSON.stringify(cartitemmyntra))
                 alert("product added to cart")
+                addcart.innerText = "In Cart"
+                localStorage.setItem("myntracart", JSON.stringify(cartitemmyntra))
             }
         })
 
@@ -103,32 +105,33 @@ function displaydata(data) {
 
     })
 
+}
     
-    
-    document.querySelector("#one").addEventListener("click", function () {
-
+    document.querySelector("#one").addEventListener("change", function (event) {
+        console.log(event)
         let filterdproduct = data.filter(function (el) {
             return el.brand == "HRITIKA"
 
         })
 
         displaydata(filterdproduct)
-
+        console.log(event)
 
     })
 
-    document.querySelector("#two").addEventListener("click", function () {
+    document.querySelector("#two").addEventListener("change", function () {
 
         let filterdproduct = data.filter(function (el) {
             return el.brand == "ZIKARAA"
         })
         displaydata(filterdproduct)
+        console.log(filterdproduct)
 
     })
 
 
 
-    document.querySelector("#three").addEventListener("click", function () {
+    document.querySelector("#three").addEventListener("change", function () {
 
         let filterdproduct = data.filter(function (el) {
             return el.brand == "MARZIYAA"
@@ -137,7 +140,7 @@ function displaydata(data) {
 
     })
 
-    document.querySelector("#four").addEventListener("click", function () {
+    document.querySelector("#four").addEventListener("change", function () {
 
         let filterdproduct = data.filter(function (el) {
             return el.brand == "SATRANI"
@@ -147,7 +150,7 @@ function displaydata(data) {
     })
 
 
-    document.querySelector("#five").addEventListener("click", function () {
+    document.querySelector("#five").addEventListener("change", function () {
 
         let filterdproduct = data.filter(function (el) {
             return el.brand == "GRUBSTAKER"
@@ -158,7 +161,7 @@ function displaydata(data) {
 
 
 
-    document.querySelector("#six").addEventListener("click", function () {
+    document.querySelector("#six").addEventListener("change", function () {
 
         let filterdproduct = data.filter(function (el) {
             return el.brand == "VISHNU WEAVES"
@@ -167,7 +170,7 @@ function displaydata(data) {
 
     })
 
-    document.querySelector("#seven").addEventListener("click", function () {
+    document.querySelector("#seven").addEventListener("change", function () {
 
         let filterdproduct = data.filter(function (el) {
             return el.brand == "SAREE MALL"
@@ -176,7 +179,7 @@ function displaydata(data) {
 
     })
 
-    document.querySelector("#eight").addEventListener("click", function () {
+    document.querySelector("#eight").addEventListener("change", function () {
 
         let filterdproduct = data.filter(function (el) {
             return el.brand == "GORGONE"
@@ -185,7 +188,7 @@ function displaydata(data) {
 
     })
 
-    document.querySelector("#nine").addEventListener("click", function () {
+    document.querySelector("#nine").addEventListener("change", function () {
 
         let filterdproduct = data.filter(function (el) {
             return el.brand == "GRIVA DESIGNER"
@@ -196,7 +199,7 @@ function displaydata(data) {
 
 
 
-    document.querySelector("#priceone").addEventListener("click", function () {
+    document.querySelector("#priceone").addEventListener("change", function () {
 
         let filterdproduct = data.filter(function (el) {
             
@@ -212,7 +215,7 @@ function displaydata(data) {
     })
 
 
-    document.querySelector("#pricetwo").addEventListener("click", function () {
+    document.querySelector("#pricetwo").addEventListener("change", function () {
 
         let filterdproduct = data.filter(function (el) {
             
@@ -228,7 +231,7 @@ function displaydata(data) {
     })
 
 
-    document.querySelector("#pricethree").addEventListener("click", function () {
+    document.querySelector("#pricethree").addEventListener("change", function () {
 
         let filterdproduct = data.filter(function (el) {
             
@@ -245,7 +248,7 @@ function displaydata(data) {
 
 
 
-    document.querySelector("#pricefour").addEventListener("click", function () {
+    document.querySelector("#pricefour").addEventListener("change", function () {
 
         let filterdproduct = data.filter(function (el) {
             
@@ -261,7 +264,7 @@ function displaydata(data) {
     })
 
 
-    document.querySelector("#pricefive").addEventListener("click", function () {
+    document.querySelector("#pricefive").addEventListener("change", function () {
 
         let filterdproduct = data.filter(function (el) {
             
@@ -278,7 +281,7 @@ function displaydata(data) {
 
 
 
-    document.querySelector("#pricesix").addEventListener("click", function () {
+    document.querySelector("#pricesix").addEventListener("change", function () {
 
         let filterdproduct = data.filter(function (el) {
             
@@ -330,7 +333,7 @@ function displaydata(data) {
    
     
 
-}
+
 
 
 
