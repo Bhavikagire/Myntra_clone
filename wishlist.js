@@ -14,7 +14,7 @@ function displaydata(data) {
 
     document.querySelector("#append").innerHTML = null
 
-    data.forEach(function (el) {
+    data.forEach(function (el,i) {
 
 
         let div = document.createElement("div")
@@ -54,6 +54,7 @@ function displaydata(data) {
             for (let i = 0; i < cartitemmyntra.length; i++) {
                 if (cartitemmyntra[i].links == el.links) {
                     alreadyct = true
+
                 }
             }
             if (alreadyct == true) {
@@ -63,11 +64,22 @@ function displaydata(data) {
                 cartitemmyntra.push({ ...el, qty: 1 })
                 localStorage.setItem("myntracart", JSON.stringify(cartitemmyntra))
                 alert("product added to cart")
+                // cartitemmyntra.splice(i,1)
             }
         })
+        
+        let remove = document.createElement("button")
+        remove.setAttribute("id","remove")
+        remove.textContent = "Remove"
+        remove.addEventListener("click",function(){
+            cartitemmyntra.splice(i,1)
+            localStorage.setItem("wishlist", JSON.stringify(cartitemmyntra))
+                window.location.reload()
+        })
+       
        
 
-        div.append(image, productname, brandname, price,addcart)
+        div.append(image, productname, brandname, price,addcart,remove)
         document.querySelector("#append").append(div)
 
 

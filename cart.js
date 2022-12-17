@@ -1,10 +1,14 @@
-document.querySelector("#wishlist").addEventListener("click", function(){
+document.querySelector("#wishgo").addEventListener("click", function(){
     window.location.href="wishlist.html"
     })
 
     document.querySelector("#bag").addEventListener("click", function(){
         window.location.href="cart.html"
         })
+        document.querySelector("#coupon").addEventListener("click", function(){
+            document.querySelector("#masai30").style.display = "block"
+            })
+          
 
 
  let cartitemmyntra = JSON.parse(localStorage.getItem("myntracart"))
@@ -63,24 +67,54 @@ function displaydata(data) {
 
         
 
-        
-
+        let remove = document.createElement("button")
+        remove.setAttribute("id","remove")
+        remove.textContent = "Remove"
+        remove.addEventListener("click",function(){
+            cartitemmyntra.splice(i,1)
+                localStorage.setItem("myntracart",JSON.stringify(cartitemmyntra))
+                window.location.reload()
+        })
        
 
        
 
-        div.append(image, productname, brandname, price,add,qtys,rem)
+        div.append(image, productname, brandname, price,add,qtys,rem,remove)
         document.querySelector("#append").append(div)
 
+        let totalcost = 0
+let total = document.querySelector("#total")
 
+data.forEach(function(el,i){
+    totalcost += (el.price*el.qty)
+})
+total.textContent = '₹' + " "+totalcost
 
+   
+    
 
+    document.querySelector(".button2").addEventListener("click",function(){
+      
+    if(document.querySelector(".enter-code>input").textContent != "masai30"){
+        console.log(document.querySelector(".enter-code>input").textContent)
+        totalcost = Math.floor(totalcost-totalcost*0.3)
+        total.textContent = '₹' + " "+totalcost
+        console.log(totalcost)
+    
+    }
+    else{
+        console.log("yes")
+       
+           
+    }
+       
+        
     })
-    
-    
 
-
+})
 }
+
+
 
 
 
