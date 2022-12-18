@@ -211,6 +211,9 @@ footer p{
     width: 100%;
     margin: auto;
 }
+.categorypics>img:hover{
+  transform: scale(1.1);
+}
 #threeoff {
   
    margin-right: 80px;

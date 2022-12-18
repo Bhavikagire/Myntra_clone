@@ -115,7 +115,9 @@ total.textContent = '₹' + " "+totalcost
 }
 
 
-
+document.querySelector("#placeorder").addEventListener("click",function(){
+    window.location.href="address.html"
+})
 
 
 
