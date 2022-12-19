@@ -8,6 +8,74 @@
     <title>shopaholic Online shopping</title>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        #footlength{
+            width: 30%;
+         
+        }
+       
+        #exp{
+           
+            width: 30%;
+            margin-left: 20%;
+        }
+        #expdiv{
+            border: 1px solid rgb(57, 38, 136);
+          
+        }
+        @media only screen and (min-width: 500px) and (max-width:1800px) {
+            #none {
+                display: none;
+            }
+            .playstoreimg{
+           
+          display: flex;
+          flex-direction: column;
+        }
+        #icons{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        
+        }
+
+            footer div {
+                width: 80%;
+            }
+            #span{
+          
+            width: 20%;
+            margin-left: 20%;
+        }
+        #span>div{
+           
+            width: 100%;
+          
+        }
+        #footlength{
+            margin-right: 60px;
+         border: 1px red;
+         color: blue;
+          
+        }
+        
+        }
+       
+        /* @media only screen and (min-width: 500px) and (max-width:1800px) {
+            #none {
+                display: none;
+               width: 100%;
+               height: 100px;
+             
+            }
+            .right input{
+                width: 300px;
+            }
+
+            footer div {
+                width: 50%;
+            }
+        } */
+    </style>
 </head>
 
 <body>
@@ -17,7 +85,7 @@
 
                 <a href="index.html"><img src="https://i.ibb.co/XLP1qDg/Screenshot-552.png" alt="logo" /></a>
 
-                <div>
+                <div id="none">
                     <div class="dropdown">
                         <button class="dropbtn">MEN</button>
 
@@ -62,7 +130,7 @@
                                 <h2 href="#">Indian & Fusion Wear </h2>
                                 <a href="#">Kurtas & Suits </a>
                                 <a href="#">Kurtis, Tunics & Tops</a>
-                                <a href="#">Sarees</a>
+                                <a href="productpage.html" target="_blank">Sarees</a>
                                 <a href="#">Ethnic Wear</a>
                                 <a href="#">Leggings, Salwars & Churidars </a>
                                 <a href="#">Skirts & Palazzos </a>
@@ -260,43 +328,45 @@
                     </div>
 
                 </div>
-                <div class="right flex">
-                    <input type="text" placeholder="Search for products, brands and more">
-                    <div class="flex bold">
-                        <div id="profile">
+            </div>
+            <div class="right flex">
+                <input type="text" placeholder="Search for products, brands and more">
+                <div class="flex bold">
+                    <div id="profile">
 
 
 
 
-                            <div class="dropdown">
-                                <ion-icon id="profileicon" style="margin-left: 14px;" name="person-outline"></ion-icon>
-                                <p class="dropbtn" style="margin: 0px; font-size: 17px;" >profile</p>
+                        <div class="dropdown">
+                            <ion-icon id="profileicon" style="margin-left: 14px;" name="person-outline"></ion-icon>
+                            <p class="dropbtn" style="margin: 0px; font-size: 17px;">profile</p>
 
-                                <div class="dropdown-content" id="block">
-                                    
-                                       <div> <a href="#">Sign-up </a></div>
-                                        <div><a href="#">log-in </a></div>
-                                        <div><a href="seller.html">Become a seller</a></div>
+                            <div class="dropdown-content" id="block">
 
-                                   
-                                </div>
+                                <div> <a href="#">Sign-up </a></div>
+                                <div><a href="#">log-in </a></div>
+                                <div><a href="seller.html">Become a seller</a></div>
+
+
                             </div>
                         </div>
-
-
-
-
-                            <div id="wishlist">
-                                <ion-icon name="heart-outline"></ion-icon>
-                                <p>wishlist</p>
-                            </div>
-                            <div id="bag">
-                                <ion-icon name="bag-outline"></ion-icon>
-                                <p>bag</p>
-                            </div>
-                       
-
                     </div>
+
+
+
+
+                    <div id="wishlist">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <p>wishlist</p>
+                    </div>
+                    <div id="bag">
+                        <ion-icon name="bag-outline"></ion-icon>
+                        <p>bag</p>
+                    </div>
+
+
+
+                </div>
         </nav>
 
     </header>
@@ -445,7 +515,7 @@
         <footer>
 
             <div class="footpara">
-                <div>
+                <div id="footlength">
                     <h2> ONLINE SHOPPING </h2>
 
                     <p> Men</p>
@@ -484,9 +554,9 @@
 
 
                 </div>
-                <div>
+                <div id="exp">
                     <h2>EXPERIENCE MYNTRA APP ON MOBILE</h2>
-                    <div class="playstoreimg">
+                    <div class="playstoreimg" >
                         <img
                             src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png">
                         <img class="desktop-iOSDownLink"
@@ -504,12 +574,12 @@
                             style="width: 30px; height: 30px; position: relative; top: 1px;">
                     </div>
                 </div>
-                <div>
+                <div  id="span">
                     <div class="flex guaranteed">
                         <img src="https://constant.myntassets.com/web/assets/img/6c3306ca-1efa-4a27-8769-3b69d16948741574602902452-original.png"
                             style="width: 68px; margin-top: 30px; height: 60px;">
                         <div>
-                            <p> <span>100% ORIGINAL</span> guarantee </p>
+                            <p > <span>100% ORIGINAL</span> guarantee </p>
                             <p>for all products at myntra.com</p>
                         </div>
                     </div>
