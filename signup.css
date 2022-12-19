@@ -216,3 +216,55 @@ nav ul li{
    margin: 0px;
     
 }
+@media only screen and (min-width: 500px) and (max-width:1800px) {
+    #none {
+        display: none;
+    }
+    .playstoreimg{
+   
+  display: flex;
+  flex-direction: column;
+}
+#icons{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+}
+
+    footer div {
+        width: 80%;
+    }
+    #span{
+  
+    width: 20%;
+    margin-left: 20%;
+}
+#span>div{
+   
+    width: 100%;
+  
+}
+#footlength{
+    margin-right: 60px;
+ /* border: 1px red;
+ color: blue; */
+  
+}
+.right input{
+    border: 0.5px;
+    border-color: white;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    width: 350px;
+   
+}
+#formin{
+  
+    width: 100%;
+
+   
+}
+#none{
+    display: none;
+}
+
+}

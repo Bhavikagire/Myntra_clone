@@ -63,11 +63,7 @@ body{
     width: 90%;
     margin: auto;
 }
-.left img{
-    width: 120px;
-    margin-top: 18px;
-   
-}
+
 #append{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: grid;
@@ -182,6 +178,7 @@ ion-icon {
     font-size: 30px;
     
   }
+  
   #totalh{
     margin-top: 40px;
     font-size: 20px;

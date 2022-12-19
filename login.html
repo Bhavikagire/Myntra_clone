@@ -113,9 +113,11 @@ form.addEventListener("submit",(e)=>{
         })
         if(user_check == false){
             alert("username not found")
+            window.location.reload()
         }
         else if(password_check == false){
             alert("password not correct")
+            window.location.reload()
         }
         else if(user_check == true && password_check == true){
             alert("login successfully");

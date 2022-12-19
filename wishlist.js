@@ -64,6 +64,7 @@ function displaydata(data) {
                 cartitemmyntra.push({ ...el, qty: 1 })
                 localStorage.setItem("myntracart", JSON.stringify(cartitemmyntra))
                 alert("product added to cart")
+                addcart.innerText = "In Cart"
                 // cartitemmyntra.splice(i,1)
             }
         })
