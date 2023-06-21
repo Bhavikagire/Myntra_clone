@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log-in</title>
     <style>
-        #container{
-           margin-left: 32%;
-           margin-right: 32%;
-           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-           margin-top: 90px;
-           padding-top: 25px;
-           padding-bottom: 30px;
-           
+        #container {
+            margin-left: 32%;
+            margin-right: 32%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin-top: 90px;
+            padding-top: 25px;
+            padding-bottom: 30px;
+
         }
-        .type{
+
+        .type {
             display: block;
             margin: 30px;
             width: 75%;
@@ -23,20 +25,23 @@
             height: 40px;
             font-size: 15px;
             padding-left: 10px;
-           
+
         }
-        h1{
+
+        h1 {
             display: flex;
             justify-content: center;
             color: rgb(34, 32, 32);
         }
-        h3{
+
+        h3 {
             font-size: 15px;
             color: gray;
             margin-left: 30px;
             margin-right: 35px;
         }
-        #join{
+
+        #join {
             color: white;
             background-color: #ff3f6c;
             border: 1px white;
@@ -46,86 +51,91 @@
             margin-left: 35px;
             font-size: 18px;
         }
-        p{
+
+        p {
             margin-left: 10px;
             margin-right: 55px;
             color: gray;
         }
-        h4{
-           text-align: center;
+
+        h4 {
+            text-align: center;
         }
-        a{
-            color:#ff3f6c;
+
+        a {
+            color: #ff3f6c;
             font-size: 20px;
             text-align: center;
-            margin-left:220px ;
+            margin-left: 220px;
         }
-        #check{
-            display: flex;
-           margin: 0;
-        }
-        
 
+        #check {
+            display: flex;
+            margin: 0;
+        }
     </style>
 </head>
+
 <body>
     <div id="container">
-    <h1>Welcome To Shopaholic  💝</h1>
-    <form id="form">
-       <input id="log_username" class="type" type="text" placeholder="Username">
-       <input id="log_password" class="type" type="password" placeholder="password">
-    
-    
-       <input id="join" type="submit" >
-    <div id="check">
-       
-        <input type="checkbox"> <p >Remember me</p>
-        <p>Forgat password</p>
+        <h1>Welcome To Shopaholic 💝</h1>
+        <form id="form">
+            <input id="log_username" class="type" type="text" placeholder="Username">
+            <input id="log_password" class="type" type="password" placeholder="password">
 
+
+            <input id="join" type="submit">
+            <div id="check">
+
+                <input type="checkbox">
+                <p>Remember me</p>
+                <p>Forgat password</p>
+
+            </div>
+        </form>
+
+
+        <hr>
+        <h4>Not a member yet</h4>
+        <a href="signup.html"> Signup here</a>
     </div>
-</form>
-
-
-    <hr>
-    <h4>Not a member yet</h4>
-<a href="signup.html"> Signup here</a>
-</div>
 </body>
+
 </html>
 <script>
     let form = document.querySelector("form");
-let loginData=JSON.parse(localStorage.getItem("signup-data"))||[];
-form.addEventListener("submit",(e)=>{
-    e.preventDefault();
-    
-       let login_username = document.querySelector("#log_username").value;
-       let login_password = document.querySelector("#log_password").value;
+    let loginData = JSON.parse(localStorage.getItem("signup-data")) || [];
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let login_username = document.querySelector("#log_username").value;
+        let login_password = document.querySelector("#log_password").value;
         let user_check = false;
         let password_check = false;
 
-        loginData.forEach((elem)=>{
-            if(login_username == elem.name){
+        loginData.forEach((elem) => {
+            if (login_username == elem.name) {
                 user_check = true;
             }
-            if(login_password == elem.password){
+            if (login_password == elem.password) {
                 password_check = true
             }
         })
-        if(user_check == false){
+        if (user_check == false) {
             alert("username not found")
             window.location.reload()
         }
-        else if(password_check == false){
+        else if (password_check == false) {
             alert("password not correct")
             window.location.reload()
         }
-        else if(user_check == true && password_check == true){
+        else if (user_check == true && password_check == true) {
             alert("login successfully");
-            window.location.href="productpage.html"
+            window.location.href = "productpage.html"
         }
 
 
 
-        
+
     })
 </script>
